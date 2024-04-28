@@ -1,0 +1,15 @@
+a=tic();
+xn=input('Enter the sequence of x(n)');
+ylabel('Amplitude');
+xlabel('Time Index');
+title('Input sequence');
+subplot(3,3,1);
+stem(xn);
+c=fft(xn);
+subplot(3,3,2);
+stem(c);
+d=ifft(xn);
+subplot(3,3,3);
+stem(d);
+b=toc();
+disp(b);
